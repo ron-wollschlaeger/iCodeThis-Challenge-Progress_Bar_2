@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iCodeThis - Challenge: Progress Bar 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="relative flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-950 to-slate-700 font-light text-white">
+    <!-- Funny Background Stuff - START -->
+    <div
+        class="bg-center[mask-image:linear-gradient(white,rgba(255,255,255,10))] absolute inset-0 z-0 animate-pulse overflow-hidden">
+        <svg class="rotate-6 scale-150 stroke-white/10 opacity-10" width="100%" height="100%"
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="smallGrid" width="8" height="8" patternUnits="userSpaceOnUse">
+                    <path d="M 8 0 L 0 0 0 8" fill="none" stroke="white" stroke-width="0.5" />
+                </pattern>
+                <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+                    <rect width="80" height="80" fill="url(#smallGrid)" />
+                    <path d="M 80 0 L 0 0 0 80" fill="none" stroke="white" stroke-width="0.5" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+    </div>
+    <!-- Funny Background Stuff - END -->
+
+    <main class="z-10 w-full max-w-2xl bg-slate-900 p-6 text-center shadow-md shadow-slate-700">
+        <h1 class="mx-auto mb-6 w-9/12 text-purple-500">You have completed
+            <span class="text-xl text-purple-300">79%</span> of this course
+        </h1>
+
+
+        <div class="mb-6 h-5 rounded-full bg-slate-800 p-1 shadow-inner">
+            <span class="block h-full w-[79%] rounded-l-3xl rounded-r-lg bg-gradient-to-r from-purple-900 to-fuchsia-500 shadow-inner"></span>
+        </div>
+
+        <button class="rounded-full border border-fuchsia-500 px-8 py-2 hover:bg-fuchsia-500">Continue</button>
+    </main>
+</body>
+</html>
